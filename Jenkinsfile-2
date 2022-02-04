@@ -1,0 +1,16 @@
+pipeline{
+
+  agent{
+    docker { image 'python' }
+  }
+  
+  stages{
+    stage('test'){
+      steps{
+        sh 'wget https://raw.githubusercontent.com/drcosimo/jenkins-lab-elis/main/test.py'
+        sh 'python test.py'
+      }
+    }
+  }
+
+}

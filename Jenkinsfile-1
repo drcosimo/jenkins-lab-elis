@@ -1,0 +1,15 @@
+pipeline{
+  agent {
+    docker {
+      image 'ubuntu'
+    }
+  }
+  
+  stages{
+    stage('mamt'){
+      steps{
+        echo 'hello world'
+      }
+  }
+}
+}
